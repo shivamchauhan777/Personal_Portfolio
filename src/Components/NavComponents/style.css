@@ -1,0 +1,26 @@
+@keyframes bgZoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .bg-zoom-animate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/dev.png');
+    background-size: cover;
+    background-position: center;
+    animation: bgZoom 3s ease-in-out infinite;
+    z-index: 0;
+    transform-origin: center;
+  }
+  
+  .bg-zoom-animate {
+    position: relative;
+    overflow: hidden;
+  }
+  

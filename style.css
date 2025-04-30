@@ -1,0 +1,16 @@
+.bg-zoom {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bg-zoom::before {
+    content: "";
+    @apply absolute inset-0 bg-center bg-cover transition-transform duration-500 ease-in-out;
+    background-image: url('/images/dev.png');
+    transform: scale(1);
+    z-index: 0;
+  }
+  
+  .bg-zoom:hover::before {
+    transform: scale(1.1);
+  }
